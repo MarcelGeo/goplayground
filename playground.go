@@ -25,4 +25,12 @@ func main() {
 	fmt.Println(messageEmpty)
 	fmt.Println(message)
 	greetings.PrintQuote()
+
+	names := []string{"Marcel", "Gabi", "Denko"}
+
+	messages, errMessages := greetings.Hellos(names)
+	if errMessages != nil {
+		log.Fatal(errMessages)
+	}
+	fmt.Println(messages)
 }
